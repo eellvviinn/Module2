@@ -1,7 +1,15 @@
 package com.skymate8.module2.two;
 
-public class DeckOfCards {
+public class DickOfCards {
 
     private CardSuits suit;
-    private 
+    private char value;
+
+    public DickOfCards(CardSuits suit, char value){
+        this.suit = suit;
+        this.value = value;
+    }
+
+
+
 }
