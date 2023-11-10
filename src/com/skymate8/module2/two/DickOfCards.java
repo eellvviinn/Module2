@@ -1,15 +1,18 @@
 package com.skymate8.module2.two;
 
+import java.util.LinkedList;
+
 public class DickOfCards {
 
-    private CardSuits suit;
-    private char value;
+    LinkedList<Card> cards = new LinkedList<>();
 
-    public DickOfCards(CardSuits suit, char value){
-        this.suit = suit;
-        this.value = value;
+
+    public LinkedList generateDeck() {
+        LinkedList<Card> cards = new LinkedList<>();
+        for (CardSuits cardSuits : CardSuits.values()) {
+            for (int j = 0; j < 13; j++) {
+                cards.add(Card())
+            }
+        }
     }
-
-
-
 }
