@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Card {
 
     private CardSuits suit;
-    private char value;
+    private String value;
 
-    public Card(CardSuits suit, char value){
+    public Card(CardSuits suit, String value){
         this.suit = suit;
         this.value = value;
     }
@@ -20,16 +20,16 @@ public class Card {
         this.suit = suit;
     }
 
-    public char getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(char value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
     public boolean isFaceCard(Card card) {
-        if(card.value == 'A' ||card.value == 'J' ||card.value == 'Q' ||card.value == 'K') {
+        if(card.value.equals("A") ||card.value.equals("J") ||card.value.equals("Q") ||card.value.equals("K")) {
             return true;
         } else {
             return false;
@@ -52,6 +52,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit + " of " + value;
+        return suit +  "of"  + value;
     }
 }
