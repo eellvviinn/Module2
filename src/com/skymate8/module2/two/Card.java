@@ -39,7 +39,7 @@ public class Card {
     @Override
     public boolean equals(Object o) {
         if (o instanceof Card card) {
-            return value == card.value && suit == card.suit;
+            return value.equals(card.value) && suit == card.suit;
         }
         return false;
     }
@@ -52,6 +52,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit +  "of"  + value;
+        return value +  " of "  + suit;
     }
 }

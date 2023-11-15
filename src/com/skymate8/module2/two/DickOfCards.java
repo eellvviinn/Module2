@@ -6,6 +6,11 @@ public class DickOfCards {
 
     LinkedList<Card> cards = new LinkedList<>();
 
+    public DickOfCards(){
+        cards = generateDeck();
+        shuffle(cards);
+    }
+
 
     public LinkedList<Card> generateDeck() {
         LinkedList<Card> cards = new LinkedList<>();
@@ -84,5 +89,15 @@ public class DickOfCards {
         cards.add(new Card(CardSuits.DIAMONDS, "Q"));
         cards.add(new Card(CardSuits.DIAMONDS, "K"));
         return cards;
+    }
+    public void shuffle(LinkedList<Card> deck){
+        LinkedList<Card> newCards = new LinkedList<>(deck);
+        cards.clear();
+        while (newCards.size() > 0) {
+            int randInt = (int)(Math.floor(Math.random() * newCards.size()));
+            cards.add(newCards.get(randInt));
+            newCards.remove(randInt);
+        }
+//        cards.forEach(System.out::println);
     }
 }
