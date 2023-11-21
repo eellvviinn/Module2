@@ -1,6 +1,7 @@
 package com.skymate8.module2.two;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class DickOfCards {
 
@@ -98,6 +99,14 @@ public class DickOfCards {
             cards.add(newCards.get(randInt));
             newCards.remove(randInt);
         }
-//        cards.forEach(System.out::println);
     }
+    public LinkedList<Card> pull7 (LinkedList<Card> deck){
+        LinkedList<Card> newCards = new LinkedList<>();
+        for (int i = 0; i < 7; i++) {
+            newCards.add(deck.get(deck.size()-1));
+            deck.remove(deck.size()-1);
+        }
+        return newCards;
+    }
+
 }
