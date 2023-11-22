@@ -1,8 +1,13 @@
 package com.skymate8.module2.three;
 
+import com.skymate8.module2.two.CardSuits;
+
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Objects;
+
+import static com.skymate8.module2.two.CardSuits.SPADES;
 
 public class Card implements Comparable<Card> {
 
@@ -66,13 +71,22 @@ public class Card implements Comparable<Card> {
     }
 
     public int compareSuit(Card c) {
-        CardSuits[] suits = {CardSuits.SPADES, CardSuits.HEARTS, CardSuits.CLOVERS, CardSuits.DIAMONDS};
-        c.getSuit().
-        if(suits.(this.getSuit()) > suits.indexOf(c.getSuit())){
+        int thisPos = -1;
+        int cPos = -1;
+        CardSuits[] cOrder = {CardSuits.SPADES, CardSuits.HEARTS, CardSuits.CLOVERS, CardSuits.DIAMONDS};
+        for (int i = 0; i < 4; i++) {
+            if(this.getSuit()==cOrder[i]){
+                thisPos = i;
+            }
+            if(c.getSuit()==cOrder[i]){
+                cPos = i;
+            }
+        }
+        if(thisPos>cPos){
             return 1;
         }
-        else if(suits.indexOf(this.suit) < suits.indexOf(c.getValue())){
-            return -1;
+        if(thisPos<cPos){
+            return 1;
         }
         return 0;
     }
