@@ -1,13 +1,11 @@
 package com.skymate8.module2.three;
 
-import com.skymate8.module2.two.CardSuits;
+import com.skymate8.module2.three.CardSuits;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Objects;
-
-import static com.skymate8.module2.two.CardSuits.SPADES;
 
 public class Card implements Comparable<Card> {
 
