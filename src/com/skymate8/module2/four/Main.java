@@ -9,9 +9,9 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Set<String> uWords = new HashSet<>();
-        Scanner scanner = new Scanner(new File("in.txt"));
+        Scanner scanner = new Scanner(new File("src/com/skymate8/module2/four/in.txt"));
         while (scanner.hasNext()){
-            String word = scanner.next().toUpperCase().replaceAll("[^a-z0-9]","");
+            String word = scanner.next().toLowerCase().replaceAll("[^a-z0-9]","");
             uWords.add(word);
         }
         scanner.close();
