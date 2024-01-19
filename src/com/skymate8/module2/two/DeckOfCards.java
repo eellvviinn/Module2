@@ -1,13 +1,12 @@
 package com.skymate8.module2.two;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
-public class DickOfCards {
+public class DeckOfCards {
 
     LinkedList<Card> cards = new LinkedList<>();
 
-    public DickOfCards(){
+    public DeckOfCards(){
         cards = generateDeck();
         shuffle(cards);
     }

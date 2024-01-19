@@ -1,16 +1,15 @@
-package com.skymate8.module2.three;
+package com.skymate8.module2.threee;
 
 import java.util.LinkedList;
 
-public class DickOfCards {
+public class DeckOfCards {
 
     LinkedList<Card> cards = new LinkedList<>();
 
-    public DickOfCards(){
+    public DeckOfCards(){
         cards = generateDeck();
         shuffle(cards);
     }
-
 
     public LinkedList<Card> generateDeck() {
         LinkedList<Card> cards = new LinkedList<>();
