@@ -13,8 +13,8 @@ public class Deck {
     private LinkedList<Card> createDeck() {
         LinkedList<Card> unShuffledCards = new LinkedList<>();
         for (Suit suit : Suit.values()) {
-            for (int rank = 1; rank <= 10; rank++) {
-                unShuffledCards.add(new Card(suit, String.valueOf(rank)));
+            for (int value = 1; value <= 10; value++) {
+                unShuffledCards.add(new Card(suit, String.valueOf(value)));
             }
             unShuffledCards.add(new Card(suit, "K"));
             unShuffledCards.add(new Card(suit, "Q"));

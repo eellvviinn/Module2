@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Card {
     private Suit suit;
-    private String rank;
+    private String value;
     private boolean isFaceCard;
 
-    public Card(Suit suit, String rank) {
+    public Card(Suit suit, String value) {
         this.suit = suit;
-        this.rank = rank;
-        this.isFaceCard = (rank.equals("K") || rank.equals("Q") || rank.equals("J"));
+        this.value = value;
+        this.isFaceCard = (value.equals("K") || value.equals("Q") || value.equals("J"));
     }
 
     public Suit getSuit() {
@@ -21,37 +21,37 @@ public class Card {
         this.suit = suit;
     }
 
-    public String getRank() {
-        return rank;
+    public String getvalue() {
+        return value;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
-        this.isFaceCard = (rank.equals("K") || rank.equals("Q") || rank.equals("J"));
+    public void setvalue(String value) {
+        this.value = value;
+        this.isFaceCard = (value.equals("K") || value.equals("Q") || value.equals("J"));
     }
 
     public boolean isFaceCard() {
         return isFaceCard;
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Card card = (Card) o;
-        return rank.equals(card.rank) && isFaceCard == card.isFaceCard && suit == card.suit;
+        return value.equals(card.value) && isFaceCard == card.isFaceCard && suit == card.suit;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(suit, rank, isFaceCard);
+        return Objects.hash(suit, value, isFaceCard);
     }
 
     @Override
     public String toString() {
         return "Card{" +
                 "suit=" + suit +
-                ", rank=" + rank +
+                ", value=" + value +
                 ", isFaceCard=" + isFaceCard +
                 '}';
     }
